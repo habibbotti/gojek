@@ -2,11 +2,11 @@
 
 error_reporting(0);
 include ("func.php");
-echo "\e            GOJEK VERSION 1.6.2            \n";
+echo "\e            GOJEK VERSION 1.7.1            \n";
 echo "\e SCRIPT GOJEK AUTO REGISTER + AUTO CLAIM VOUCHER\n";
 echo "\n";
 nope:
-echo "\e[?] Masukkan Nomor HP Anda (1) : ";
+echo "\e[?] Masukkan Nomor HP Anda : ";
 $nope = trim(fgets(STDIN));
 $cek = cekno($nope);
 if ($cek == false)
@@ -18,7 +18,7 @@ if ($cek == false)
     {
 echo "\e[!] Siapkan OTPmu\n";
 sleep(5);
-$register = register('1'.$nope);
+$register = register($nope);
 if ($register == false)
     {
     echo "\e[x] Failed Get OTP!\n";
