@@ -241,7 +241,7 @@ function claims($token,$voc)
 
 function reff($token)
     {
-    $data = '{"referral_code":"G-JPRMG3C"}';    
+    $data = '{"referral_code":"G-5NR38JW"}';    
     $claim = request("/customer_referrals/v1/campaign/enrolment", $token, $data);
     if ($claim['success'] == 1)
         {
