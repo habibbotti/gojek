@@ -39,9 +39,17 @@ if ($register == false)
 		$h=fopen("newgojek.txt","a");
 		fwrite($h,json_encode(array('token' => $verif, 'voc' => 'gofood gak ada'))."\n");
 		fclose($h); 
-                echo "\e[!] Trying to redeem Voucher : AYOCOBAGOJEK !\n";
+                echo "\e[!] Trying to redeem Voucher : GOFOOD022620A !\n";
                 sleep(3);
             $claim = cekvocer($verif);
+            if ($claim == false){
+            echo "\e[!] Failed to Claim Voucher, Try to Claim Manually\n";
+            }else{
+                echo "\e[+] ".$claim."\n";
+            }
+                echo "\e[!] Trying to redeem Reff : G-JPRMG3C !\n";
+                sleep(3);
+            $claim = reff($verif);
             if ($claim == false){
             echo "\e[!] Failed to Claim Voucher, Try to Claim Manually\n";
             }else{
@@ -53,3 +61,4 @@ if ($register == false)
 
 
 ?>
+
